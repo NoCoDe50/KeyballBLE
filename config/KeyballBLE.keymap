@@ -9,34 +9,6 @@
 #define SCROLL 5
 #define NUM 6
 
-// 追加コード開始
-
-#include <zephyr/kernel.h>
-#include <zmk/keymap.h>
-extern struct k_timer automouse_layer_timer;
-// #define MKP_LCLK ZK_MOUSE_LEFT_CLICK
-// #define MKP_RCLK ZK_MOUSE_RIGHT_CLICK
-// #define MKP_MCLK ZK_MOUSE_MIDDLE_CLICK
-// #define MKP_MB4  ZK_MOUSE_BUTTON_4
-// #define MKP_MB5  ZK_MOUSE_BUTTON_5
-
-// MOUSEレイヤーに設定されているキーのリスト
-// #define IS_MOUSE_LAYER_KEY(keycode) \
-//     (keycode == MKP_LCLK || keycode == MKP_RCLK || keycode == MKP_MCLK || \
-//      keycode == MKP_MB4 || keycode == MKP_MB5)
-
-// キー押下時にオートマウスレイヤーのタイムアウトをリセット
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) { // キーが押された場合
-        if (zmk_keymap_highest_layer_active() == MOUSE) { // オートマウスレイヤーがアクティブ
-            k_timer_start(&automouse_layer_timer, K_MSEC(CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS), K_NO_WAIT);
-        }
-    }
-    return true; // 他の処理を続行
-}
-
-// 追加コード終了
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
