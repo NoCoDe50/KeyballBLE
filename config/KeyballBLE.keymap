@@ -28,7 +28,7 @@ extern struct k_timer automouse_layer_timer;
 // キー押下時にオートマウスレイヤーのタイムアウトをリセット
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) { // キーが押された場合
-        if (zmk_keymap_highest_layer_active() == AUTOMOUSE_LAYER) { // オートマウスレイヤーがアクティブ
+        if (zmk_keymap_highest_layer_active() == MOUSE) { // オートマウスレイヤーがアクティブ
             k_timer_start(&automouse_layer_timer, K_MSEC(CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS), K_NO_WAIT);
         }
     }
