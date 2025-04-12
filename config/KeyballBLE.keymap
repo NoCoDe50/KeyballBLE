@@ -9,6 +9,24 @@
 #define SCROLL 5
 #define NUM 6
 
+//TEST
+// MOUSEレイヤーに設定されているキーのリスト
+#define IS_MOUSE_LAYER_KEY(keycode) \
+    (keycode == MKP_LCLK || keycode == MKP_RCLK || keycode == MKP_MCLK || \
+     keycode == MKP_MB4 || keycode == MKP_MB5)
+
+// キー押下時にオートマウスレイヤーのタイムアウトをリセット
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) { // キーが押された場合
+        if (zmk_keymap_highest_layer_active() == MOUSE && IS_MOUSE_LAYER_KEY(keycode)) {
+            // MOUSEレイヤーがアクティブで、MOUSEレイヤーのキーが押された場合
+            k_timer_start(&automouse_layer_timer, K_MSEC(CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS), K_NO_WAIT);
+        }
+    }
+    return true; // 他の処理を続行
+}
+//TEST
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
