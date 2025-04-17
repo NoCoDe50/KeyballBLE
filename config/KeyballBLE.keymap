@@ -5,12 +5,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-//#include <zephyr/kernel.h>
-#include <dt-bindings/zmk/keymap.h>
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
+
+//追加コード開始
+
+#include <zephyr/kernel.h>
+#include <zmk/keymap.h>
 
 // MOUSEレイヤーに設定されているキーのリスト
 #define IS_MOUSE_LAYER_KEY(keycode) \
@@ -27,6 +29,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true; // 他の処理を続行
 }
+
+//追加コード終了
 
 &mt {
     flavor = "balanced";
