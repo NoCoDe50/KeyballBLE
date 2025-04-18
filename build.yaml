@@ -21,10 +21,10 @@ include:
  - board: seeeduino_xiao_ble
    shield: KeyballBLE_R
    snippet: studio-rpc-usb-uart
-#   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
+   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
  - board: seeeduino_xiao_ble
    shield: KeyballBLE_L
+   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
  - board: seeeduino_xiao_ble
-#   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
    shield: settings_reset
-#   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
+   cmake-args: -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
