@@ -69,10 +69,10 @@
 
         FUNCTION {
             bindings = <
-&kp N1     &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6          &kp N7        &kp N8          &kp N9           &kp N0
-&kp F1     &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8          &kp F9        &kp F10         &kp F11          &kp F12
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LSHFT
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+&kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                             &kp N6                    &kp N7     &kp N8     &kp N9     &kp N0
+&kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6          &kp F7                 &kp F8                    &kp F9     &kp F10    &kp F11    &kp F12
+&kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)  &kp RA(N6)      &kp RC(RS(LESS_THAN))  &kp RS(RC(GREATER_THAN))  &kp RC(R)  &kp RC(E)  &kp RC(L)  &kp LSHFT
+&trans      &trans      &trans      &trans      &trans      &trans          &trans                 &trans                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
