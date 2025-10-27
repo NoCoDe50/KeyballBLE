@@ -94,7 +94,6 @@
                 ;
     };
 
-    / {
     zip_temp_layer: zip_temp_layer {
         compatible = "zmk,behavior-pointing-scroll-layer";
         label = "ZIP_TEMP_LAYER";
