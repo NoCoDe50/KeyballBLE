@@ -20,7 +20,7 @@
 
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <20 18 6 7 8>;
         };
     };
 
