@@ -27,6 +27,11 @@
             bindings = <&none>;
             key-positions = <20>;
         };
+
+        MCLK {
+            bindings = <&none>;
+            key-positions = <7>;
+        };
     };
 
     macros {
