@@ -22,7 +22,7 @@
         6 // U MB4
         8// O MB5
     >;
-　　require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <200>;
 };
 
 / {

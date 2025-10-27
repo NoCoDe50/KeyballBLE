@@ -10,16 +10,11 @@
 #define NUM 6
 
 
-//&mkp_input_listener {
-//    compatible = "zmk,input-listener";
-//    input-processors = <&zip_temp_layer 5 2000>;
-//};
-
-&mkp_input_listener: mkp_input_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&zip_temp_layer 5 2000>;
-    };
+&mkp_input_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    input-processors = <&zip_temp_layer 5 2000>;
+};
 
 &mt {
     flavor = "balanced";
