@@ -32,6 +32,16 @@
             bindings = <&none>;
             key-positions = <7>;
         };
+
+        MB4 {
+            bindings = <&none>;
+            key-positions = <6>;
+        };
+
+        MB5 {
+            bindings = <&none>;
+            key-positions = <8>;
+        };
     };
 
     macros {
